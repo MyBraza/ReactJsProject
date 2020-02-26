@@ -6,15 +6,16 @@ import Nav from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile'
 import Messages from './components/Messages/Messages'
 
-function App() {
+function App(props) {
+	
 	return (
 		<BrowserRouter className='app-wrapper'>
 			<Header />
 			<div className='content-container'>				
 				<div className='content-wrapper'>
 					<Nav />
-					<Route component={Profile} path='/profile'/>
-					<Route component={Messages} path='/messages'/>
+					<Route render = { () => <Profile state = { props.state.profile }/>} path='/profile'/>
+					<Route render = { () => <Messages state = { props.state.messagesPage } />} path='/messages'/>
 				</div>
 			</div>
 		</BrowserRouter>

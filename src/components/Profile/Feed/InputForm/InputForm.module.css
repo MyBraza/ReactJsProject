@@ -1,0 +1,38 @@
+.header {
+	margin: 0;
+	font-size: 20px;
+}
+
+.block {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.input {
+	-webkit-box-shadow: inset 0px -25px 10px -20px rgba(229, 61, 0, 1);
+	-moz-box-shadow: inset 0px -25px 10px -20px rgba(229, 61, 0, 1);
+	box-shadow: inset 0px -25px 10px -20px rgba(229, 61, 0, 1);
+
+	width: 96%;
+	font-size: 16px;
+	margin-top: 10px;
+	border-radius: 5px;
+	padding: 0 2%;
+
+	color: #f0f0f0;
+	background-color: transparent;
+
+	vertical-align: middle;
+	resize: none;
+	border: none;
+	overflow: hidden;
+}
+
+.button_submit {
+	width: 20%;
+	height: 30px;
+	margin-top: 10px;
+
+	align-self: flex-end;
+}

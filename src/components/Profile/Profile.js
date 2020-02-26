@@ -6,15 +6,15 @@ import Feed from './Feed/Feed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faKeyboard } from '@fortawesome/free-solid-svg-icons'
 
-const Profile = () => {
+const Profile = (props) => {
 	return (
 		<div className={stl.profile}>
 			<div className={stl.column_left}>
 				<UserImage />
 			</div>
 			<div className={stl.column_right}>
-				<UserInfo status='online' device={faMobileAlt} birthday='26.09.1998'/>
-				<Feed />
+				<UserInfo state = {props.state.info}/>
+				<Feed state = {props.state.feed}/>
 			</div>
 		</div>
 	)

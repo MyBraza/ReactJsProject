@@ -1,12 +1,16 @@
 import React from 'react';
 import stl from './Messages.module.css'
 
-const Profile = () => {
+const Messages = (props) => {
+	
+	let message = props.state.messages
+		.map (text =><div>{text}</div>);
+	
 	return (
 		<div>
-		Messages
+		{message}
 		</div>
 	)
 }
 
-export default Profile
+export default Messages

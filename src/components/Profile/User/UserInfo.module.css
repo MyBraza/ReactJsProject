@@ -45,11 +45,14 @@
 
 	font-size: 14px;
 	
-	margin-right: 20%;
+	text-align: left;
 }
 
 .value {
 	color: #F0F0F0;
 	
 	font-size: 14px;
+	padding-left: 50px;
+	
+	text-align: right;
 }

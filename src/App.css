@@ -6,6 +6,10 @@ button:focus {
     outline: none;
 }
 
+textarea:focus {
+    outline: none;
+}
+
 .content-container{
 	display: -webkit-flex;
 	display: -moz-flex;
