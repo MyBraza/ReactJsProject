@@ -1,0 +1,19 @@
+.profile {
+	grid-area: content;
+	
+	display: grid;
+	
+	grid-template-areas: 'l r';
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 10px;
+	
+	padding: 10px;
+}
+
+.column_left{
+	grid-area: l;
+}
+
+.column_right{
+	grid-area: r;
+}
