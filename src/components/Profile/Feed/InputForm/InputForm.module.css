@@ -10,6 +10,7 @@
 }
 
 .input {
+	height: 100px;
 	width: 96%;
 	font-size: 16px;
 	margin-top: 10px;
@@ -22,7 +23,7 @@
 	vertical-align: middle;
 	resize: none;
 	border: none;
-	border-bottom: 2px solid #E53D00;
+	border-bottom: 1px solid #E53D00;
 	overflow: hidden;
 }
 

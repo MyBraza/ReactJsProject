@@ -6,6 +6,12 @@ import Nav from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile'
 import Messages from './components/Messages/Messages'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faMobileAlt, faKeyboard, faQuestionCircle, faShare, faHeart as fasFaHeart } from '@fortawesome/free-solid-svg-icons'
+import { faCommentAlt, faHeart as farFaHeart } from '@fortawesome/free-regular-svg-icons'
+
+library.add(faCommentAlt, farFaHeart,  faMobileAlt, faKeyboard, faQuestionCircle, faShare, fasFaHeart)
+
 function App(props) {
 	
 	return (
