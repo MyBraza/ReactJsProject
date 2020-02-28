@@ -10,11 +10,11 @@ const Profile = (props) => {
 	return (
 		<div className={stl.profile}>
 			<div className={stl.column_left}>
-				<UserImage />
+				<UserImage state = {props.state.info}/>
 			</div>
 			<div className={stl.column_right}>
 				<UserInfo state = {props.state.info}/>
-				<Feed state = {props.state.feed}/>
+				<Feed state = {props.state.feed} userInfo = {props.state.info} />
 			</div>
 		</div>
 	)
