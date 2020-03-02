@@ -2,7 +2,8 @@ import React from 'react'
 import stl from './Profile.module.css'
 import UserImage from './User/UserImage'
 import UserInfo from './User/UserInfo'
-import Feed from './Feed/Feed'
+import InputForm from './InputForm/InputForm'
+import Feed from '../Feed/Feed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faKeyboard } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,7 +15,8 @@ const Profile = (props) => {
 			</div>
 			<div className={stl.column_right}>
 				<UserInfo state = {props.state.info}/>
-				<Feed state = {props.state.feed} userInfo = {props.state.info} />
+				<InputForm userInfo = {props.state.info} />
+				<Feed state = {props.state.feed}/>
 			</div>
 		</div>
 	)

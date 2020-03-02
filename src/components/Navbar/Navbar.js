@@ -11,7 +11,7 @@ const Nav = () => {
 				<FontAwesomeIcon icon={faUser} className={stl.icon}/>
 				<div className={stl.text}>Profile</div>
 			</NavLink>
-			<NavLink className={stl.item} to='/messages' activeClassName={stl.active}>
+			<NavLink className={stl.item} to='/dialogs' activeClassName={stl.active}>
 				<FontAwesomeIcon icon={faEnvelope} className={stl.icon}/>
 				<div className={stl.text}>Messages</div>
 			</NavLink>

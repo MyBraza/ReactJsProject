@@ -1,0 +1,31 @@
+.userInfoBlock {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.userImage {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+
+	object-fit: cover;
+}
+
+.userName {
+	display: flex;
+	align-items: center;
+	
+	margin-left: 10px;
+	font-size: 16px;
+}
+
+.icon {
+	color: #16e5e5;
+
+	margin-left: 5px;
+}
