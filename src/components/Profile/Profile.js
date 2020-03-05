@@ -15,7 +15,7 @@ const Profile = (props) => {
 			</div>
 			<div className={stl.column_right}>
 				<UserInfo state = {props.state.info}/>
-				<InputForm userInfo = {props.state.info} />
+				<InputForm inputFormValue = {props.state.inputFormValue} pushPost = {props.pushPost} changeInputFormValue = {props.changeInputFormValue} />
 				<Feed state = {props.state.feed}/>
 			</div>
 		</div>

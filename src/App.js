@@ -20,7 +20,7 @@ function App(props) {
 			<div className='content-container'>				
 				<div className='content-wrapper'>
 					<Nav />
-					<Route render = { () => <Profile state = { props.state.profile }/>} path='/profile'/>
+					<Route render = { () => <Profile state = { props.state.profile } pushPost={props.pushPost} changeInputFormValue={props.changeInputFormValue} />} path='/profile'/>
 					<Route render = { () => <Dialogs state = { props.state.messagesPage } />} path='/dialogs'/>
 				</div>
 			</div>

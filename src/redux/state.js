@@ -53,6 +53,7 @@ let state = {
 				adress: ''
 			}
 		},
+		inputFormValue: '',
 		feed:[
 			{
 				id: 1, 
@@ -77,6 +78,34 @@ let state = {
 			}
 		]
 	}
+}
+
+export const pushPost = () => {
+	let post = {
+		id: 3,
+		userName: state.profile.info.userName,
+		userImage: state.profile.info.userImage,
+		userStatus: state.profile.info.device,
+		contentText: state.profile.inputFormValue,
+		contentImage: '',
+		likeCounter: 0,
+		commentCounter: 0,
+		shareCounter: 0
+	}
+	state.profile.inputFormValue = ''
+	state.profile.feed.push(post)
+	renderEntireTree()
+}
+
+export const changeInputFormValue = (text) => {
+	state.profile.inputFormValue = text
+	renderEntireTree()
+}
+
+let renderEntireTree = () => {}
+
+export const subsribe = (observer) => {
+	renderEntireTree = observer
 }
 
 export default state;
