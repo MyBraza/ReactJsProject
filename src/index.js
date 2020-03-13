@@ -1,27 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import state, {changeInputFormValue, pushPost, subsribe} from './redux/state';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+import store from './redux/store'
 
-const renderEntireTree = () => {
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faMobileAlt, faKeyboard, faQuestionCircle, faShare, faHeart as fasFaHeart } from '@fortawesome/free-solid-svg-icons'
+import { faCommentAlt, faHeart as farFaHeart } from '@fortawesome/free-regular-svg-icons'
+
+library.add(faCommentAlt, farFaHeart,  faMobileAlt, faKeyboard, faQuestionCircle, faShare, fasFaHeart)
+
+const renderEntireTree = (state) => {
     ReactDOM.render(
         <App
             state = {state}
-            pushPost={pushPost}
-            changeInputFormValue={changeInputFormValue}
+            dispatch = {store.dispatch.bind(store)}
         />,
         document.getElementById('root')
     );
 }
 
-subsribe(renderEntireTree)
+store.subscribe(renderEntireTree)
 
-renderEntireTree()
+renderEntireTree(store.getState())
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-
-serviceWorker.unregister();
+serviceWorker.unregister()

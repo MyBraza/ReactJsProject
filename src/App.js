@@ -6,12 +6,6 @@ import Nav from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile'
 import Dialogs from './components/Dialogs/Dialogs'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faMobileAlt, faKeyboard, faQuestionCircle, faShare, faHeart as fasFaHeart } from '@fortawesome/free-solid-svg-icons'
-import { faCommentAlt, faHeart as farFaHeart } from '@fortawesome/free-regular-svg-icons'
-
-library.add(faCommentAlt, farFaHeart,  faMobileAlt, faKeyboard, faQuestionCircle, faShare, fasFaHeart)
-
 function App(props) {
 	
 	return (
@@ -20,8 +14,8 @@ function App(props) {
 			<div className='content-container'>				
 				<div className='content-wrapper'>
 					<Nav />
-					<Route render = { () => <Profile state = { props.state.profile } pushPost={props.pushPost} changeInputFormValue={props.changeInputFormValue} />} path='/profile'/>
-					<Route render = { () => <Dialogs state = { props.state.messagesPage } />} path='/dialogs'/>
+					<Route render = { () => <Profile state = { props.state.profile } dispatch={props.dispatch}/>} path='/profile'/>
+					<Route render = { () => <Dialogs state = { props.state.dialogPage } />} path='/dialogs'/>
 				</div>
 			</div>
 		</BrowserRouter>

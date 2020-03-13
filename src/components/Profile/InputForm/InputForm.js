@@ -1,6 +1,6 @@
 import React from 'react'
 import stl from './InputForm.module.css'
-import {changeInputFormValue} from "../../../redux/state";
+import {addPostActionCreator, changeInputFormValueActionCreator} from "../../../redux/store";
 
 const InputForm = (props) => {
 	
@@ -8,13 +8,18 @@ const InputForm = (props) => {
 
 	const changeTextareaValue = () => {
 		let text = inputFormTextarea.current.value
-		props.changeInputFormValue(text)
+		props.dispatch(changeInputFormValueActionCreator(text))
 	}
+
+	const pushPost = () => {
+		props.dispatch(addPostActionCreator())
+	}
+
 	return (
 		<div className={'block_style ' + stl.block}>
 			<h2 className = {stl.header} >Share your post</h2>
 			<textarea ref={inputFormTextarea} onChange = {changeTextareaValue} placeholder = 'Enter text' value={props.inputFormValue} className = {stl.input} ></textarea>
-			<button onClick = {props.pushPost} className={'button_darkgray ' + stl.button_submit}>Share</button>
+			<button onClick = {pushPost} className={'button_darkgray ' + stl.button_submit}>Share</button>
 		</div>
 	)
 }
