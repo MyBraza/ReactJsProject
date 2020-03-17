@@ -21,7 +21,10 @@ const renderEntireTree = (state) => {
     );
 }
 
-store.subscribe(renderEntireTree)
+store.subscribe(() => {
+    let state = store.getState()
+    renderEntireTree(state)
+})
 
 renderEntireTree(store.getState())
 
